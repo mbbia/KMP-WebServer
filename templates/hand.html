@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section style="padding:10px">
+  <p style="font-size:18px; color:#8a2055">
+    <b>N.B. The submitted sequence can contain:</b>
+    <ul style="margin-left:50px">
+      <li><b>only A, T, C, G characters;</b></li>
+      <li><b>maximum 50 characters;</b></li>
+      <li>characters on one or more lines;</li>
+      <li>capital letters, lower-case letters or both.</li>
+    </ul>
+  </p>
+  <hr style="color:#20558a">
+  <br>
+  <label style="margin-left:50px"><b>Write your sequence:</b></label>
+  <br><br>
+  <form method = "POST"
+        style = "margin-left:50px">
+    <textarea name="seq" placeholder="Write your sequence here" rows="5" cols="80"></textarea>
+    <input type="submit"/>
+  </form>
+</section>
+
+{% endblock %}

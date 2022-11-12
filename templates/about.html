@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section>
+  <p style="font-size:18px">
+    <b>Knuth Morris Pratt algorithm</b> is a very useful algorithm in string
+    computation. <br>This algorithm is faster than the naive one in
+    resolving exact pattern matching because it first creates an
+    <b>index table</b> on the pattern to find and then uses this index to scan
+    the text in a more efficient way.
+  </p>
+  <p style="font-size:18px">
+    This web service has been made in order to find exact matching between a short
+    nucleotide sequence provided by the user and the genome of SARS-COV-2.<br>
+    The reference sequence used for this project is the one provided by the
+    <b>NCBI database</b> and can be found at this link:
+  </p>
+  <a style="margin:50px;font-size:18px;" href="https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2?report=fasta">Click here to see the reference sequence</a>
+  <br><br>
+  <hr style="color:#20558a">
+  <br>
+</section>
+
+{% endblock %}

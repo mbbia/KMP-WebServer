@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section style="padding:10px">
+  <p style="font-size:18px">
+    <b>This web service stores the genome of SARS-COV-2</b> and allows the user
+    to upload a short nucleotide sequence or to manually write it and then
+    returns the number of occurrences of the pattern and the positions
+    in which they have been found on the genome of SARS-COV-2.
+  </p>
+  <hr style="color:#20558a">
+  <p style="font-size:24px">
+    <b>Select the input method:</b>
+  </p>
+</section>
+
+<section style="text-align:center;margin-top:-30px">
+  <div onclick="location.href= {{ url_for('file') }}">
+    <span style="color:#ffffff;font-size:2em;line-height:300px">
+      <b>UPLOAD A FILE</b>
+    </span>
+  </div>
+
+  <div onclick="location.href= {{ url_for('hand') }}">
+    <span style="color:#ffffff;font-size:2em;line-height:300px">
+      <b>WRITE YOUR SEQUENCE</b>
+    </span>
+  </div>
+</section>
+
+{% endblock %}

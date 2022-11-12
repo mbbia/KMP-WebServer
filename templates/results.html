@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{% if sequence %}
+  {% if check %}
+    <section>
+      <p>
+        <em><b>The sequence you submitted is:</b></em>
+        <br><br>
+        <em style="color: #20558a; ">{{ sequence }}</em>
+      </p>
+      <hr style="color:#20558a">
+      <p>
+        <em><b>The number of occurrences of the pattern is:</b></em>
+        <br><br>
+        <em style="color: #20558a">{{ number }}</em>
+      </p>
+      <hr style="color:#20558a">
+      <p>
+        <em><b>The positions in which the pattern is found are:</b></em>
+        <br><br>
+        <em style="color: #8a2055"><b>N.B. The index of the first nucleotide of SARS-COV-2 sequence is considered equal to zero!</b></em>
+        <br><br>
+        {% for i in range(0,number-1) %}
+          <em style="color: #20558a">{{ results[i] }}, </em>
+        {% endfor %}
+          <em style="color: #20558a">{{ results[-1] }} </em>
+      </p>
+      <hr style="color:#20558a">
+    </section>
+  {% else %}
+    <section>
+      <br>
+      <p style="color: #8a2055; font-size: 22px;"><b>Error... The sequence you submitted is not a valid sequence!</b></p>
+      <hr style="color:#20558a">
+    </section>
+  {% endif %}
+{% else %}
+  <section>
+    <br>
+    <p style="color: #8a2055; font-size: 22px;"><b>Error... You didn't submit any sequence!</b></p>
+    <hr style="color:#20558a">
+  </section>
+{% endif %}
+
+{% endblock %}
